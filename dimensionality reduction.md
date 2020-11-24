@@ -1,29 +1,38 @@
 # dimensionality reduction
 
+background
+
+- [L.J.P. van der Maaten](https://lvdmaaten.github.io/), E.O. Postma, and H.J. van den Herik. **Dimensionality reduction: A comparative review.** Online Preprint, 2008.
+
 ## preserve the pairwise distance structure
 
-- PCA
+- PCA,  Principal component analysis
 
   Points that are dissimilar that would fall apart from each other. This is to preserve some large pairwise distance in the map.
 
-- MDS
+- MDS,  multidimensional scaling
 
 - sammon mapping
-- NCA (Goldberger et al., 2005)
+- 
 
 ## preserve of local distance over global distance
 
-- [t-SNE](https://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf)
+- Isomap
 
-  a popular implementation of t-SNE is using Barnes-Hut approximation
+- J. Goldberger, S. Roweis, G.E. Hinton, and R.R. Salakhutdinov. **Neighbourhood components analysis.** In Advances in Neural Information Processing Systems, volume 17, pages 513–520, Cambridge, MA, 2005. MIT Press. [[paper](https://proceedings.neurips.cc/paper/2004/file/42fe880812925e520249e808937738d2-Paper.pdf)] 
+- Geoffrey Hinton and Sam Roweis. **Stochastic Neighbor Embedding.** [[paper](https://proceedings.neurips.cc/paper/2002/file/6150ccc6069bea6b5716254057a194ef-Paper.pdf)]
 
-  - [flt-sne](https://github.com/KlugerLab/FIt-SNE)
+- Laurens van der Maaten and Geoffrey Hinton. **Visualizing data using t-sne. Journal of machine learning research**, 9(Nov):2579–2605, 2008. [[paper](https://lvdmaaten.github.io/publications/papers/JMLR_2008.pdf)]
 
-    accelerate t-SNE, one of the implementation
+- George C Linderman, Manas Rachh, Jeremy G Hoskins, Stefan Steinerberger, and Yuval Kluger. **Effcient algorithms for t-distributed stochastic neighborhood embedding**. arXiv preprint arXiv:1712.09005, 2017.
+
+  *follow up, accelerate t-SNE, one of the implementation, a popular implementation of t-SNE is using Barnes-Hut approximation*
+
+- Jarkko Venna and Samuel Kaski. 2006. **Local multidimensional scaling**. <i>Neural Netw.</i> 19, 6 (July 2006), 889–899. [[paper](https://research.cs.aalto.fi/pml/papers/wsom05-nn.pdf)]
+
+  *we can consider to use its metric for evaluation*
 
 - LLE,locally linear embedding
-
-- Isomap
 
 - LargeVis
 
@@ -33,19 +42,19 @@
 
 - MVU weinberger et al. 2004
 
-- umap
+- Leland McInnes, John Healy, and James Melville. **Umap: Uniform manifold approximation and projection for dimension reduction.** arXiv preprint arXiv:1802.03426, 2018. [[paper](https://arxiv.org/pdf/2009.12981.pdf)]
+
+  *to speep up the optimization process: using **negative sampling** from Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems, pp. 3111–3119, 2013.*
 
 ## out-of-sample extension
 
 - Nystrom approximation (Bengio et al., 2004),
 
-## neural network based approaches
+## parametric approaches
 
 key words: parametric, dimension reduction,autoencoder, neural network
 
-- autoencoder
-
-  http://mcn2017public.pbworks.com/w/file/fetch/137810175/HintonSalakhudtkinov2006.pdf
+- Geoffrey E Hinton and Ruslan R Salakhutdinov. **Reducing the dimensionality of data with neural networks.** science, 313(5786):504–507, 2006. [[paper](http://mcn2017public.pbworks.com/w/file/fetch/137810175/HintonSalakhudtkinov2006.pdf)]
 
   they focus on maximize the variance in the latent space
 
@@ -55,31 +64,39 @@ key words: parametric, dimension reduction,autoencoder, neural network
 
   compare with PCA https://medium.com/@ee18m003/autoencoder-and-pca-for-dimensionality-reduction-on-mnist-dataset-with-code-dace21d87432
 
-- [Learning a Nonlinear Embedding by Preserving Class Neighbourhood Structure](http://proceedings.mlr.press/v2/salakhutdinov07a/salakhutdinov07a.pdf)
+- R.R. Salakhutdinov and G.E. Hinton. **Learning a non-linear embedding by preserving class neighbourhood structure.** In Proceedings of the 11th International Conference on Artificial Intelligence and Statistics, volume 2, pages 412–419, 2007. [[paper](http://proceedings.mlr.press/v2/salakhutdinov07a/salakhutdinov07a.pdf)]
 
-  autoencoder, try to preserve the knn property
+  *nonlinear NCA, try to preserve neighbor after dimension reduction*
 
-  [Neighbourhood Components Analysis](https://proceedings.neurips.cc/paper/2004/file/42fe880812925e520249e808937738d2-Paper.pdf)
+- Laurens Van Der Maaten. **Learning a parametric embedding by preserving local structure.** In Artificial Intelligence and Statistics, pp. 384–391, 2009. [[paper](https://lvdmaaten.github.io/publications/papers/AISTATS_2009.pdf)]
 
-- train a NN to learn t-SNE mapping
-
-  [Learning a Parametric Embedding by Preserving Local Structure](https://lvdmaaten.github.io/publications/papers/AISTATS_2009.pdf)
-
-  only the mapping, but use the t-SNE KL as loss
+  *called **parametric-tsne**, train a NN to learn t-SNE mapping, only the mapping, but use the t-SNE KL as loss*
 
   python implementation:
 
-  https://github.com/jsilter/parametric_tsne
+  [impl1](https://github.com/jsilter/parametric_tsne)
 
-  https://github.com/Academich/param_tsne
+  [impl2](https://github.com/Academich/param_tsne)
 
-  https://github.com/johnhw/tsne_demo
+  [impl3](https://github.com/johnhw/tsne_demo)
 
-  https://github.com/kylemcdonald/Parametric-t-SNE
+  [impl4](https://github.com/kylemcdonald/Parametric-t-SNE)
 
   
 
-- 
+- Jacob M. Graving, Iain D. **VAE-SNE: a deep generative model for simultaneous dimensionality reduction and clustering.** Couzin bioRxiv 2020.07.17.207993. [[paper](https://www.biorxiv.org/content/10.1101/2020.07.17.207993v1.full)]
+
+  *use autoencoder to inverse input, loss=mse_loss + sne_loss*
+
+- Tim Sainburg and Leland McInnes and Timothy Q Gentner. **Parametric UMAP: learning embeddings with deep neural networks for representation and semi-supervised learning.** 2020 unpublished
+
+  [github code](https://github.com/timsainb/ParametricUMAP_paper), [umap dev0.5+](https://github.com/lmcinnes/umap), 
+
+The development of dimension reduction technique
+
+non-parametric: NCA-> SNE ->t-SNE-UMAP
+
+parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap,autoencoder
 
 - [Deep Supervised t-Distributed Embedding](https://icml.cc/Conferences/2010/papers/149.pdf)
 
