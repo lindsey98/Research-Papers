@@ -115,5 +115,15 @@ parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap
 - supervised
 - unsupervised
 
+# nearest neighbor search
+
+[wiki page](https://en.wikipedia.org/wiki/Nearest_neighbor_search) NNS is a form of **proximity search**. There are a lot of algorithm to speed up the optimization or approximate search. So NNS is related to **NCA** and other follow up work.
+
+key works: fast knn search, nearest neighbors search, locally sensitive hash, approximate algorithm
+
+- Dong, Wei, Charikar Moses, and Kai Li. **"Efficient k-nearest neighbor graph construction for generic similarity measures."** Proceedings of the 20th international conference on World wide web. ACM, 2011. [[paper](https://www.cs.princeton.edu/cass/papers/www11.pdf)]
+
+  *PyNNDescent is a python implementation of this work. This library can be extremely fast to find k-nn.* [[python implmentation](https://github.com/lmcinnes/pynndescent)]
+
 
 
