@@ -1,10 +1,10 @@
 # dimensionality reduction
 
-background
+ ## background
 
 - [L.J.P. van der Maaten](https://lvdmaaten.github.io/), E.O. Postma, and H.J. van den Herik. **Dimensionality reduction: A comparative review.** Online Preprint, 2008.
 
-## preserve the pairwise distance structure
+## preserve the pairwise distance structure, nonparametric
 
 - PCA,  Principal component analysis
 
@@ -15,7 +15,7 @@ background
 - sammon mapping
 - 
 
-## preserve of local distance over global distance
+## preserve of local distance over global distance, nonparametric
 
 - Isomap
 
@@ -46,7 +46,7 @@ background
 
   *to speep up the optimization process: using **negative sampling** from Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, and Jeff Dean. Distributed representations of words and phrases and their compositionality. In Advances in neural information processing systems, pp. 3111–3119, 2013.*
 
-## out-of-sample extension
+## out-of-sample extension for non-parametric DR
 
 - Nystrom approximation (Bengio et al., 2004),
 
@@ -56,13 +56,11 @@ key words: parametric, dimension reduction,autoencoder, neural network
 
 - Geoffrey E Hinton and Ruslan R Salakhutdinov. **Reducing the dimensionality of data with neural networks.** science, 313(5786):504–507, 2006. [[paper](http://mcn2017public.pbworks.com/w/file/fetch/137810175/HintonSalakhudtkinov2006.pdf)]
 
-  they focus on maximize the variance in the latent space
+  *autoencoder, they focus on maximize the variance in the latent space* [[example1](https://towardsdatascience.com/autoencoder-on-dimension-reduction-100f2c98608c)] [[example2](http://gradientdescending.com/pca-vs-autoencoders-for-dimensionality-reduction/)] [[example3](https://medium.com/@ee18m003/autoencoder-and-pca-for-dimensionality-reduction-on-mnist-dataset-with-code-dace21d87432)]
 
-  example: https://towardsdatascience.com/autoencoder-on-dimension-reduction-100f2c98608c
+- Jing Want, Haibo He, Danil V. Prokhorov. **A Folded Neural Autoencoder for Dimension Reduction.** 2012 [[paper](https://reader.elsevier.com/reader/sd/pii/S1877050912007272?token=F2E8595924308C8E445972892CD63AA5196B0B97FA6FE909048D1F43C0C49C94E444E5BC63D5B1B73DA65F93FC3161DC)]
 
-  http://gradientdescending.com/pca-vs-autoencoders-for-dimensionality-reduction/
-
-  compare with PCA https://medium.com/@ee18m003/autoencoder-and-pca-for-dimensionality-reduction-on-mnist-dataset-with-code-dace21d87432
+  *To reduce parameters, they reuse the parameter of encoder for decoder in autoencoder*
 
 - R.R. Salakhutdinov and G.E. Hinton. **Learning a non-linear embedding by preserving class neighbourhood structure.** In Proceedings of the 11th International Conference on Artificial Intelligence and Statistics, volume 2, pages 412–419, 2007. [[paper](http://proceedings.mlr.press/v2/salakhutdinov07a/salakhutdinov07a.pdf)]
 
@@ -74,39 +72,30 @@ key words: parametric, dimension reduction,autoencoder, neural network
 
   python implementation:
 
-  [impl1](https://github.com/jsilter/parametric_tsne)
-
-  [impl2](https://github.com/Academich/param_tsne)
-
-  [impl3](https://github.com/johnhw/tsne_demo)
-
-  [impl4](https://github.com/kylemcdonald/Parametric-t-SNE)
-
-  
+  [impl1](https://github.com/jsilter/parametric_tsne) [impl2](https://github.com/Academich/param_tsne) [impl3](https://github.com/johnhw/tsne_demo) [impl4](https://github.com/kylemcdonald/Parametric-t-SNE)
 
 - Jacob M. Graving, Iain D. **VAE-SNE: a deep generative model for simultaneous dimensionality reduction and clustering.** Couzin bioRxiv 2020.07.17.207993. [[paper](https://www.biorxiv.org/content/10.1101/2020.07.17.207993v1.full)]
 
   *use autoencoder to inverse input, loss=mse_loss + sne_loss*
 
-- Tim Sainburg and Leland McInnes and Timothy Q Gentner. **Parametric UMAP: learning embeddings with deep neural networks for representation and semi-supervised learning.** 2020 unpublished
+- Tim Sainburg and Leland McInnes and Timothy Q Gentner. **Parametric UMAP: learning embeddings with deep neural networks for representation and semi-supervised learning.** 2020 unpublished(ICLR? maybe) [[paper](https://arxiv.org/pdf/2009.12981.pdf)] [[github code](https://github.com/timsainb/ParametricUMAP_paper)], [[umap dev0.5+](https://github.com/lmcinnes/umap)]
 
-  [github code](https://github.com/timsainb/ParametricUMAP_paper), [umap dev0.5+](https://github.com/lmcinnes/umap), 
 
-The development of dimension reduction technique
+> The development of dimension reduction technique
+>
+> > non-parametric: NCA-> SNE ->t-SNE-UMAP
+> >
+> > parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap,autoencoder
 
-non-parametric: NCA-> SNE ->t-SNE-UMAP
+***
 
-parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap,autoencoder
+
 
 - [Deep Supervised t-Distributed Embedding](https://icml.cc/Conferences/2010/papers/149.pdf)
-
-- parametrization
 
 - [Deep Auto-Encoder Neural Networks in Reinforcement Learning](http://ml.informatik.uni-freiburg.de/former/_media/publications/langeijcnn2010.pdf)
 
   Similar parametrizations have been proposed before, e.g., in NeuroScale (Lowe and Tipping, 1996) and back-constrained GPLVMs (Lawrence and Candela, 2006).
-
-- [a folded neural network autoencoder for dimensionality reduction](https://reader.elsevier.com/reader/sd/pii/S1877050912007272?token=F2E8595924308C8E445972892CD63AA5196B0B97FA6FE909048D1F43C0C49C94E444E5BC63D5B1B73DA65F93FC3161DC)
 
 - https://lvdmaaten.github.io/publications/papers/MachLearn_2012.pdf
 
@@ -121,9 +110,9 @@ parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap
 
 key works: fast knn search, nearest neighbors search, locally sensitive hash, approximate algorithm
 
-- Dong, Wei, Charikar Moses, and Kai Li. **"Efficient k-nearest neighbor graph construction for generic similarity measures."** Proceedings of the 20th international conference on World wide web. ACM, 2011. [[paper](https://www.cs.princeton.edu/cass/papers/www11.pdf)]
+- Dong, Wei, Charikar Moses, and Kai Li. **"Efficient k-nearest neighbor graph construction for generic similarity measures."** Proceedings of the 20th international conference on World wide web. ACM, 2011. [[paper](https://www.cs.princeton.edu/cass/papers/www11.pdf)] [[python implmentation](https://github.com/lmcinnes/pynndescent)]
 
-  *PyNNDescent is a python implementation of this work. This library can be extremely fast to find k-nn.* [[python implmentation](https://github.com/lmcinnes/pynndescent)]
+  *PyNNDescent is a python implementation of this work. This library can be extremely fast to find k-nn.* 
 
 
 
