@@ -1,4 +1,4 @@
-# deep learning
+# machine learning
 
 ## hyperparameter tuning
 
@@ -9,8 +9,12 @@
 - hidden_layer = [3,4,5,6,...]
 - hidden_dim = [32, 64, 128, 256,...] 
 
-## torch.save
+## AutoEncoder
 
-- save models in [pytorch](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
 
-## 
+
+- Diederik P Kingma and Max Welling.  **Auto-Encoding Variational Bayes.** stat.ML 2014. [[paper](https://arxiv.org/abs/1312.6114)]
+
+  *VAE*
+
+- beta VAE
