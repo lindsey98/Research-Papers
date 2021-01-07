@@ -7,4 +7,4 @@ Here list papers to start AI debugging that cover different areas.
 - Attribution method
 - Visualization
 - Active learning
-- [AI debugging](ai_debugging)
+- [AI debugging](ai_debugging.md)
