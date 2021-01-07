@@ -3,7 +3,7 @@
 Here list papers to start AI debugging that cover different areas.
 
 ## Table of contents
-- [Dimension Reduction](dimensionality reduction.md)
+- [Dimension Reduction](dimensionality_reduction.md)
 - Attribution method
 - Visualization
 - Active learning
