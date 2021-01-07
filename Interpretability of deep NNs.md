@@ -43,6 +43,14 @@
 - Hao Yuan, Jiliang Tang, Xia Hu, and Shuiwang Ji. **XGNN: Towards model-level explanations of graph neuralnetworks. ** Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery DataMining, Aug 2020.[[paper](https://arxiv.org/abs/2006.02587)]
 - Q. Shen *et al*., **"Visual Interpretation of Recurrent Neural Network on Multi-dimensional Time-series Forecast,**" *2020 IEEE Pacific Visualization Symposium (PacificVis)*, Tianjin, China, 2020, pp. 61-70, doi: 10.1109/PacificVis48177.2020.2785.[[paper](https://ieeexplore.ieee.org/abstract/document/9086238)]
 
+# AI debugging
+
+
+
+- [Julius Adebayo](https://arxiv.org/search/cs?searchtype=author&query=Adebayo%2C+J), [Michael Muelly](https://arxiv.org/search/cs?searchtype=author&query=Muelly%2C+M), [Ilaria Liccardi](https://arxiv.org/search/cs?searchtype=author&query=Liccardi%2C+I), [Been Kim](https://arxiv.org/search/cs?searchtype=author&query=Kim%2C+B). **Debugging Tests for Model Explanations**. Advances in Neural Information Processing Systems 33 pre-proceedings (NeurIPS 2020). Nov 2020. [[paper](https://proceedings.neurips.cc/paper/2020/file/075b051ec3d22dac7b33f788da631fd4-Paper.pdf)]
+
+  *This paper try to address the problem of finding bugs in post doc models. It first categorize bugs in to 3 types. Then it summarize attribution methods available. The It implemented lots of experiment and a human study to prove those methods can be applied to find some bugs.*
+
 
 
 
