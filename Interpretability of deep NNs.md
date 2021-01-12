@@ -32,6 +32,12 @@
 
 - Mukund Sundararajan, Ankur Taly, and Qiqi Yan. **Axiomatic attribution for deep networks**, 2017. [paper](https://arxiv.org/pdf/1703.01365.pdf) 
 
+### example-based approaches
+
+- Jeyakumar, Jeya Vikranth and Noor, Joseph and Cheng, Yu-Hsi and Garcia, Luis and Srivastava, Mani. **How Can I Explain This to You? An Empirical Study of Deep Neural Network Explanation Methods**. Advances in Neural Information Processing Systems, 2020. [[paper](https://proceedings.neurips.cc/paper/2020/file/2c29d89cc56cdb191c60db2f0bae796b-Paper.pdf)] [[github](https://github.com/nesl/Explainability-Study)]
+
+  *This paper use the most similar samples in the training dataset to explain the prediction of models.*
+
 ## explain models
 
 ### example level
