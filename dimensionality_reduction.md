@@ -83,7 +83,7 @@ key words: parametric, dimension reduction,autoencoder, neural network
 
 > The development of dimension reduction technique
 >
-> > non-parametric: NCA-> SNE ->t-SNE-UMAP
+> > non-parametric: NCA-> SNE ->t-SNE->UMAP
 > >
 > > parametric: NN and autoencoder-> nonlinear NCA->parametric-tsne->parametric umap,autoencoder
 
