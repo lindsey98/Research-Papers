@@ -6,7 +6,7 @@ Here list papers to start AI debugging that cover different areas.
 - [Dimension Reduction](dimensionality_reduction.md)
 - Attribution method
 - Visualization
-- Active learning
+- [Active learning](active_learning.md)
 - [AI debugging](ai_debugging.md)
 
 ## Categories
