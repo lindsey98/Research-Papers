@@ -64,6 +64,8 @@
 - Variational Adversarial Active Learning.(2019).ICCV.[[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sinha_Variational_Adversarial_Active_Learning_ICCV_2019_paper.pdf)]
 
   *VAAL*
+  
+-  State-Relabeling Adversarial Active Learning.(2020).CVPR.[[paper](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhang_State-Relabeling_Adversarial_Active_Learning_CVPR_2020_paper.pdf)]
 
 ### hybrid method
 
@@ -73,6 +75,8 @@
 
 - Adaptive Active Learning for Image Classification.(2013).CVPR.[[paper](https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Li_Adaptive_Active_Learning_2013_CVPR_paper.pdf)]
 
+- 
+
   
 
 ### expected model change
@@ -80,6 +84,10 @@
 - Active Learning for Speech Recognition: the Power of Gradients
 
   *EGL, expected gradient length*
+
+SOTA:
+
+SRAAL, LL4AL, VAAL,Core-set,WAAL
 
 
 
