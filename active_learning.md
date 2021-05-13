@@ -4,6 +4,7 @@
 In chronological order: 
 
 - Deep Bayesian Active Learning with Image Data. PMLR 2017 [[paper](http://proceedings.mlr.press/v70/gal17a/gal17a.pdf)][[code in Keras](https://github.com/Riashat/Deep-Bayesian-Active-Learning)]. **DBAL**
+    -- Based on BALD, use mutual information between model prediction and model posterior as uncertainty acquisation function (Idea: sample which the ensemble model is uncertain on average but there exist subsets of models producing diagreeing predictions with high certainty)
 
 - Localization-aware active learning for object detection. Asian Conference on Computer Vision 2018. [[paper](https://arxiv.org/pdf/1801.05124.pdf)] No code
 - Towards human-machine cooperation: Self- supervised sample mining for object detection. CVPR 2018. [[paper](https://arxiv.org/pdf/1803.09867.pdf)][[code in Pytorch](https://github.com/yanxp/SSM-Pytorch)] **SSM**
