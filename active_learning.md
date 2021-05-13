@@ -42,7 +42,9 @@
 - Variational Adversarial Active Learning. ICCV 2019 [[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sinha_Variational_Adversarial_Active_Learning_ICCV_2019_paper.pdf)][[code in Pytorch](https://github.com/sinhasam/vaal)] **VAAL**
    - Similar to **BGADL**, it trains Beta-VAE-GAN(GAN only has discriminator, no generator) to project image into latent vector then discriminate whether it is labeled/unlabelled. Difference is that **VAAL** is not uncertainty-based, it will select images where the discriminator thinks they are unlabelled images with high confidence. i.e. Select images that are significantly different from labelled images. <img src="pic/VAAL.png">
 
+## Hybrid based
 - Deep Active Learning: Unified and Principled Method for Query and Training. PMLR 2020. [[paper](http://proceedings.mlr.press/v108/shui20a/shui20a.pdf)]
+   - Based on both uncertainty and diversity. Contribution is more on diversity part.
    - Similar to the above two SOTA, it tries to make L(labelled)+B(selected unlabelled) --> D(total) by minimizing the Wasserstein distance (EMD distance in continuous case) between D and L+B. It can be shown that [[link](https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/86762056)] minimizing Wassertein distance between 2 distribution p and q is equivalent of the following min-max optimization on some function f(.) <img src="pic/WGAN.png">. Thus we need to solve <img src="pic/DAL_Unified.png">
 
 
