@@ -106,7 +106,4 @@ In chronological order:
 
 
 
-SOTA:
-SRAAL, LL4AL, VAAL,Core-set,WAAL
-
 
