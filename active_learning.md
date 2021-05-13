@@ -31,7 +31,7 @@
    - Training is batch-wise, the loss for "loss" requires some contrastive learning
 
 - Bayesian Generative Active Deep Learning. ICML 2019 [[paper](https://arxiv.org/pdf/1904.11643.pdf)][[code in Pytorch](https://github.com/toantm/BGADL)] **BGADL**
-   - First use BALD to select informative samples. Then use VAE-ACGAN (as effective data augmentation) to generate new samples that are as informative as the selected one <img src="">
+   - First use BALD to select informative samples. Then use VAE-ACGAN (as effective data augmentation) to generate new samples that are as informative as the selected one <img src="pic/BGADL.png">
 
    
 ## Diversity based
@@ -43,7 +43,7 @@
    - Similar to **BGADL**, it trains Beta-VAE-GAN(GAN only has discriminator, no generator) to project image into latent vector then discriminate whether it is labeled/unlabelled. Difference is that **VAAL** is not uncertainty-based, it will select images where the discriminator thinks they are unlabelled images with high confidence. i.e. Select images that are significantly different from labelled images. <img src="pic/VAAL.png">
 
 - Deep Active Learning: Unified and Principled Method for Query and Training. PMLR 2020. [[paper](http://proceedings.mlr.press/v108/shui20a/shui20a.pdf)]
-   - Similar to the above two SOTA, it tries to make L(labelled)+B(selected unlabelled) --> D(total) by minimizing the Wasserstein distance (EMD distance in continuous case) between D and L+B. It can be shown that [[link](https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/86762056)] minimizing Wassertein distance between 2 distribution p and q is equivalent of the following min-max optimization on some function f(.) <img src="pic/WGAN.png">. Thus we need to solve <img src="DAL_Unified.png">
+   - Similar to the above two SOTA, it tries to make L(labelled)+B(selected unlabelled) --> D(total) by minimizing the Wasserstein distance (EMD distance in continuous case) between D and L+B. It can be shown that [[link](https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/86762056)] minimizing Wassertein distance between 2 distribution p and q is equivalent of the following min-max optimization on some function f(.) <img src="pic/WGAN.png">. Thus we need to solve <img src="pic/DAL_Unified.png">
 
 
 # TODO
