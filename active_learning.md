@@ -17,7 +17,7 @@ In chronological order:
    - Leverage both high-consistency examples (trust the model's prediction as label) and low-consistency examples (pseudo-label) to complement the traditional uncertainty approach which only focus on high-uncertainty examples <img src="pic/SSM_framework.png">
    
 - Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
-   - Add diversity into consideration, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving <img src="pic/coreset_optim.png">
+   - Add diversity into consideration, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving <img src="pic/coreset_optim.png">. i.e. x_i is random training point, s0+s1 are initial labelled samples + selected unlabelled samples. We want to choose b center points such that the largest distance between a data point and its nearest center is minimized. In other words, s0+s1 has high coverage on the distributions of x_i. <img src="pic/coreset_graph2.png">
 
 - Active learning for deep detection network. ICCV 2019 [[paper](https://arxiv.org/pdf/1911.09168.pdf)][[code in Tensorflow](https://gitlab.com/haghdam/deep_active_learning/-/tree/master)]
 - Variational Adversarial Active Learning. ICCV 2019 [[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sinha_Variational_Adversarial_Active_Learning_ICCV_2019_paper.pdf)][[code in Pytorch](https://github.com/sinhasam/vaal)] **VAAL**
