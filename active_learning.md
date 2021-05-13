@@ -9,8 +9,8 @@ In chronological order:
 
 - Localization-aware active learning for object detection. Asian Conference on Computer Vision 2018. [[paper](https://arxiv.org/pdf/1801.05124.pdf)] No code
     - Use localization tightness and localization stability as uncertainty measures
-    - Localization tightness: IoU overlap between proposals and final predicted bounding boxes
-    - Localization stability: Consistency in prediction when proposals are perturbed by noises
+    - Localization tightness: IoU overlap between proposals and final predicted bounding boxes <img src="pic/localization_tight.png">
+    - Localization stability: Consistency in prediction when proposals are perturbed by noises <img src="pic/localization_stability.png">
      
 - Towards human-machine cooperation: Self- supervised sample mining for object detection. CVPR 2018. [[paper](https://arxiv.org/pdf/1803.09867.pdf)][[code in Pytorch](https://github.com/yanxp/SSM-Pytorch)] **SSM**
 - Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
