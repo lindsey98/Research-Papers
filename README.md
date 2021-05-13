@@ -1,4 +1,4 @@
-# researchPapers
+# Research Papers
 
 Summary of SOTA research papers
 
