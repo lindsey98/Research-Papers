@@ -47,11 +47,15 @@
    - Based on both uncertainty and diversity. Contribution is more on diversity part.
    - Similar to the above two SOTA, it tries to make L(labelled)+B(selected unlabelled) --> D(total) by minimizing the Wasserstein distance (EMD distance in continuous case) between D and L+B. It can be shown that [[link](https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/86762056)] minimizing Wassertein distance between 2 distribution p and q is equivalent of the following min-max optimization on some function f(.) <img src="pic/WGAN.png">. Thus we need to solve <img src="pic/DAL_Unified.png">
 
+- Contextual Diversity for Active Learning. ECCV 2020 [[paper](https://arxiv.org/pdf/2008.05723)][[code in Pytorch](https://github.com/sharat29ag/CDAL)] **CDAL**
+   - Based on both uncertainty and diversity. It tries to select samples with different class confusion (distribution of prediction confidence is different) to enrich the contextual diversity
+   - It implements different selection strategies: CDAL+Core-Set, CDAL+RL, Contextual Diversity, Visual representation, Semantic representation
+
 
 # TODO
    
 
-- Contextual Diversity for Active Learning. ECCV 2020 [[paper](https://arxiv.org/pdf/2008.05723)][[code in Pytorch](https://github.com/sharat29ag/CDAL)] **CDAL**
+
 
 - Towards Fine-grained Sampling for Active Learning in Object Detection. CVPR 2020 workshop [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w54/Desai_Towards_Fine-Grained_Sampling_for_Active_Learning_in_Object_Detection_CVPRW_2020_paper.pdf)] No code
 
