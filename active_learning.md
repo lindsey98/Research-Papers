@@ -15,6 +15,8 @@
    - Use cross-image consistency (crop and paste) + classification confidence to measure uncertainty <img src="pic/SSM_CrossImage.png">
    - Leverage both high-consistency examples (trust the model's prediction as label) and low-consistency examples (pseudo-label) to complement the traditional uncertainty approach which only focus on high-uncertainty examples <img src="pic/SSM_framework.png">
 
+- Deep active learning for object detection. BMVC 2018. [[paper]()]
+
 
 - Active learning for deep detection network. ICCV 2019 [[paper](https://arxiv.org/pdf/1911.09168.pdf)][[code in Tensorflow](https://gitlab.com/haghdam/deep_active_learning/-/tree/master)]
    - Use consistency of pixel's objectiveness with respect to its neighborhood pixels as uncertainty measure. The formula is very similar to **BALD**, taking the difference between entropy of average and average entropy. <img src="pic/AL4DD_formula.png">
@@ -60,7 +62,6 @@
    <img src="pic/SRAAL.png">
 
 # TODO
-   
 
 - Towards Fine-grained Sampling for Active Learning in Object Detection. CVPR 2020 workshop [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w54/Desai_Towards_Fine-Grained_Sampling_for_Active_Learning_in_Object_Detection_CVPRW_2020_paper.pdf)] No code
 
