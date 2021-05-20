@@ -41,6 +41,9 @@
 - Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
    - Diversity-based selection, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving. i.e. x_i is random training point, s0+s1 are initial labelled samples + selected unlabelled samples. We want to choose b center points such that the largest distance between a data point and its nearest center is minimized. In other words, s0+s1 has high coverage on the distributions of x_i. 
    
+- Diverse mini-batch Active Learning. 2019 arxiv. [[paper][https://arxiv.org/pdf/1901.05954.pdf]]
+   - Very similar to Core-set, here just apply k-means clustering and take data points closest to the k centroids 
+   
 - Variational Adversarial Active Learning. ICCV 2019 [[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sinha_Variational_Adversarial_Active_Learning_ICCV_2019_paper.pdf)][[code in Pytorch](https://github.com/sinhasam/vaal)] **VAAL**
    - Similar to **BGADL**, it trains Beta-VAE-GAN(GAN only has discriminator, no generator) to project image into latent vector then discriminate whether it is labeled/unlabelled. Difference is that **VAAL** is not uncertainty-based, it will select images where the discriminator thinks they are unlabelled images with high confidence. i.e. Select images that are significantly different from labelled images. 
 
@@ -64,4 +67,7 @@
 # TODO
 
 - Towards Fine-grained Sampling for Active Learning in Object Detection. CVPR 2020 workshop [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w54/Desai_Towards_Fine-Grained_Sampling_for_Active_Learning_in_Object_Detection_CVPRW_2020_paper.pdf)] No code
+- Deep Similarity-Based Batch Mode Active Learning with Exploration-Exploitation. 2017 IEEE International Conference on Data Mining (ICDM). [[paper][https://ieeexplore.ieee.org/document/8215530]]
+- Deep Batch Active Learning by Diverse,Uncertain Gradient Lower Bounds. 
+- Multiple Instance Active Learning for Object Detection. 
 
