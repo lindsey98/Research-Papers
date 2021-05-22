@@ -22,6 +22,10 @@
 
 - Consistency-based Semi-supervised Learning for Object Detection. arxiv, 2019. [[paper](https://openreview.net/pdf?id=BkgHgrSxIr)]
 
+- Contextual Diversity for Active Learning. ECCV 2020 [paper][code in Pytorch] CDAL
+  - Based on both uncertainty and diversity. It tries to select samples with different class confusion (distribution of prediction confidence is different) to enrich the contextual diversity
+   - It implements different selection strategies: CDAL+Core-Set, CDAL+RL, Contextual Diversity, Visual representation, Semantic representation
+   
 - Multi-instance Active Learning for Object Detection. 
 
 - LL4AL 
