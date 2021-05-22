@@ -17,3 +17,9 @@
 - Scalable Active Learning for Object Detection. arxiv. 2020. [[paper](https://arxiv.org/pdf/2004.04699.pdf)]
    - Scoring function: entropy at position p of class c (on objectness map), mutual information of E ensemble models, gradient of output layer, bounding box with confidence
    - Sampling strategy: k-means++, coreset, sparse-modelling
+
+- Cost-effective Object Detection: Active Sample Mining with Switchable Selection Criteria.  IEEE transactions on neural networks and learning systems, 2018. [[paper](https://arxiv.org/pdf/1807.00147.pdf)]
+
+- Consistency-based Semi-supervised Learning for Object Detection. arxiv, 2019. [[paper](https://openreview.net/pdf?id=BkgHgrSxIr)]
+
+- LL4AL 
