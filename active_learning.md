@@ -1,5 +1,5 @@
 
-# Active learning for object detection In chronological order
+# Active learning In chronological order
 
 
 ## Uncertainty based
