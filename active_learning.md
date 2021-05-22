@@ -34,8 +34,7 @@
     - Based on BALD, use mutual information between model prediction and model posterior as uncertainty acquisation function (Idea: A sample is selected when the ensemble model is uncertain on average but there exist subsets of models producing diagreeing predictions with high certainty)
     - I(y,w|x, D_train) = H(y|x, D_train) - E_{p(w|D_train)}(H(y|x, w))
 
-- Bayesian batch active learning as sparse subset approximation. arxiv. 2019. [[paper]
-- (https://arxiv.org/pdf/1908.02144.pdf)]
+- Bayesian batch active learning as sparse subset approximation. arxiv. 2019. [[paper](https://arxiv.org/pdf/1908.02144.pdf)]
    - Choose D’ such that 𝑝(𝜃│𝐷_0 ∪ D’) best approximates 𝑝(𝜃│𝐷_0 ∪ 𝐷) 
 
 - Learning Loss for Active Learning. CVPR 2019 [[paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Yoo_Learning_Loss_for_Active_Learning_CVPR_2019_paper.pdf)][[code in Pytorch](https://github.com/Mephisto405/Learning-Loss-for-Active-Learning)] **LL4AL**
@@ -70,7 +69,7 @@ Diversity has 3 interpretations:
 
 ## Hybrid based
 
-- Deep Batch Active Learning by Diverse, Uncertain Gradient Lower Bounds. ICLR 2020. [[paper][https://arxiv.org/pdf/1906.03671.pdf]] **BADGE**
+- Deep Batch Active Learning by Diverse, Uncertain Gradient Lower Bounds. ICLR 2020. [[paper](https://arxiv.org/pdf/1906.03671.pdf)] **BADGE**
    - Gradient Norm represents the uncertainty
    - Use k-menas++ to ensure diversity
    
