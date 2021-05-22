@@ -88,6 +88,29 @@ Diversity has 3 interpretations:
    - Novel uncertainty measure
    - Sampling is like K-center 
    
+   
+   
+## Insufficient data for DL
+- Cost-effective active learning for deep image classification. IEEE Transactions on Circuits and Systems for Video Technology, 2016. [[paper][https://arxiv.org/pdf/1701.03551.pdf]]
+   - Do not discard certain samples, assign them pseudo-labels 
+
+- Bayesian generative active deep learning. PMLR, 2019. [[paper][https://arxiv.org/pdf/1904.11643.pdf]]
+   - Besides AL, it trains VAE-ACGAN to generate new images that is as informative as the AL selected ones
+
+- Generative adversarial active learning for unsupervised outlier detection. IEEE Transactions on Knowledge and Data Engineering, 2019. [[paper][]]
+   - Train a SVM classifier, use GAN to generate instances to query
+   - They claim the synthesized instances might be closer to the descision boundary, thus more informative?
+
+
+
+
+
+
+
+
+
+
+
 
 # TODO
 
