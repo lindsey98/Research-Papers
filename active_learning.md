@@ -34,7 +34,8 @@
     - Based on BALD, use mutual information between model prediction and model posterior as uncertainty acquisation function (Idea: A sample is selected when the ensemble model is uncertain on average but there exist subsets of models producing diagreeing predictions with high certainty)
     - I(y,w|x, D_train) = H(y|x, D_train) - E_{p(w|D_train)}(H(y|x, w))
 
-- Bayesian batch active learning as sparse subset approximation. arxiv. 2019. [[paper][https://arxiv.org/pdf/1908.02144.pdf]]
+- Bayesian batch active learning as sparse subset approximation. arxiv. 2019. [[paper]
+- (https://arxiv.org/pdf/1908.02144.pdf)]
    - Choose D’ such that 𝑝(𝜃│𝐷_0 ∪ D’) best approximates 𝑝(𝜃│𝐷_0 ∪ 𝐷) 
 
 - Learning Loss for Active Learning. CVPR 2019 [[paper](https://openaccess.thecvf.com/content_CVPR_2019/papers/Yoo_Learning_Loss_for_Active_Learning_CVPR_2019_paper.pdf)][[code in Pytorch](https://github.com/Mephisto405/Learning-Loss-for-Active-Learning)] **LL4AL**
@@ -52,16 +53,16 @@ Diversity has 3 interpretations:
 <2> Selected unlabelled data have different distribution to already labelled data
 <3> Labelled + Selected unlabelled data best approximate the full data distribution
 
-- Active deep learning for classification of hyperspectral images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing 2016. [[paper][https://arxiv.org/pdf/1611.10031.pdf]]
+- Active deep learning for classification of hyperspectral images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing 2016. [[paper](https://arxiv.org/pdf/1611.10031.pdf)]
    - Select subset of data as sparse subset selection
 
-- Deep Similarity-Based Batch Mode Active Learning with Exploration-Exploitation. 2017 IEEE International Conference on Data Mining (ICDM). [[paper][https://ieeexplore.ieee.org/document/8215530]]
+- Deep Similarity-Based Batch Mode Active Learning with Exploration-Exploitation. 2017 IEEE International Conference on Data Mining (ICDM). [[paper](https://ieeexplore.ieee.org/document/8215530)]
    - 𝑥∗=𝑎𝑟𝑔𝑚𝑎𝑥_𝑥 E(x)−𝛽𝑆𝑖𝑚(𝑥) (uncertainty-similarity of x w.r.t already selected data)
 
 - Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
    - Diversity-based selection, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving. i.e. x_i is random training point, s0+s1 are initial labelled samples + selected unlabelled samples. We want to choose b center points such that the largest distance between a data point and its nearest center is minimized. In other words, s0+s1 has high coverage on the distributions of x_i. 
 
-- Diverse mini-batch Active Learning. 2019 arxiv. [[paper][https://arxiv.org/pdf/1901.05954.pdf]]
+- Diverse mini-batch Active Learning. 2019 arxiv. [[paper](https://arxiv.org/pdf/1901.05954.pdf)]
    - Very similar to Core-set, here just apply k-means clustering and take data points closest to the k centroids 
    
 - Variational Adversarial Active Learning. ICCV 2019 [[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sinha_Variational_Adversarial_Active_Learning_ICCV_2019_paper.pdf)][[code in Pytorch](https://github.com/sinhasam/vaal)] **VAAL**
@@ -91,23 +92,15 @@ Diversity has 3 interpretations:
    
    
 ## Insufficient data for DL
-- Cost-effective active learning for deep image classification. IEEE Transactions on Circuits and Systems for Video Technology, 2016. [[paper][https://arxiv.org/pdf/1701.03551.pdf]]
+- Cost-effective active learning for deep image classification. IEEE Transactions on Circuits and Systems for Video Technology, 2016. [[paper](https://arxiv.org/pdf/1701.03551.pdf)]
    - Do not discard certain samples, assign them pseudo-labels 
 
-- Bayesian generative active deep learning. PMLR, 2019. [[paper][https://arxiv.org/pdf/1904.11643.pdf]]
-   - Besides AL, it trains VAE-ACGAN to generate new images that is as informative as the AL selected ones
-
-- Generative adversarial active learning for unsupervised outlier detection. IEEE Transactions on Knowledge and Data Engineering, 2019. [[paper][]]
+- Generative adversarial active learning. arxiv, 2017. [[paper](https://arxiv.org/pdf/1702.07956.pdf)]
    - Train a SVM classifier, use GAN to generate instances to query
    - They claim the synthesized instances might be closer to the descision boundary, thus more informative?
-
-
-
-
-
-
-
-
+   
+- Bayesian generative active deep learning. PMLR, 2019. [[paper](https://arxiv.org/pdf/1904.11643.pdf)]
+   - Besides AL, it trains VAE-ACGAN to generate new images that is as informative as the AL selected ones
 
 
 
