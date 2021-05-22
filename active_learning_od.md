@@ -22,4 +22,6 @@
 
 - Consistency-based Semi-supervised Learning for Object Detection. arxiv, 2019. [[paper](https://openreview.net/pdf?id=BkgHgrSxIr)]
 
+- Multi-instance Active Learning for Object Detection. 
+
 - LL4AL 
