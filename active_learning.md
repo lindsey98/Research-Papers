@@ -52,11 +52,14 @@ Diversity has 3 interpretations:
 <2> Selected unlabelled data have different distribution to already labelled data
 <3> Labelled + Selected unlabelled data best approximate the full data distribution
 
-- Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
-   - Diversity-based selection, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving. i.e. x_i is random training point, s0+s1 are initial labelled samples + selected unlabelled samples. We want to choose b center points such that the largest distance between a data point and its nearest center is minimized. In other words, s0+s1 has high coverage on the distributions of x_i. 
-
 - Active deep learning for classification of hyperspectral images. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing 2016. [[paper][https://arxiv.org/pdf/1611.10031.pdf]]
    - Select subset of data as sparse subset selection
+
+- Deep Similarity-Based Batch Mode Active Learning with Exploration-Exploitation. 2017 IEEE International Conference on Data Mining (ICDM). [[paper][https://ieeexplore.ieee.org/document/8215530]]
+   - 𝑥∗=𝑎𝑟𝑔𝑚𝑎𝑥_𝑥 E(x)−𝛽𝑆𝑖𝑚(𝑥) (uncertainty-similarity of x w.r.t already selected data)
+
+- Active learning for convolutional neural network: A core-set approach. ICLR 2018 [[paper](https://arxiv.org/pdf/1708.00489.pdf)][[code in Tensorflow](https://github.com/ozansener/active_learning_coreset)] **Core-set**
+   - Diversity-based selection, selected unlabelled data + labelled data should be close to the distribution of all training data. Use K-center to optimize. We are essentially solving. i.e. x_i is random training point, s0+s1 are initial labelled samples + selected unlabelled samples. We want to choose b center points such that the largest distance between a data point and its nearest center is minimized. In other words, s0+s1 has high coverage on the distributions of x_i. 
 
 - Diverse mini-batch Active Learning. 2019 arxiv. [[paper][https://arxiv.org/pdf/1901.05954.pdf]]
    - Very similar to Core-set, here just apply k-means clustering and take data points closest to the k centroids 
@@ -89,7 +92,7 @@ Diversity has 3 interpretations:
 # TODO
 
 - Towards Fine-grained Sampling for Active Learning in Object Detection. CVPR 2020 workshop [[paper](https://openaccess.thecvf.com/content_CVPRW_2020/papers/w54/Desai_Towards_Fine-Grained_Sampling_for_Active_Learning_in_Object_Detection_CVPRW_2020_paper.pdf)] No code
-- Deep Similarity-Based Batch Mode Active Learning with Exploration-Exploitation. 2017 IEEE International Conference on Data Mining (ICDM). [[paper][https://ieeexplore.ieee.org/document/8215530]]
+
 
 - Multiple Instance Active Learning for Object Detection. 
 
