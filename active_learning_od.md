@@ -19,11 +19,11 @@
 
 - Learning Loss for Active Learning. CVPR 2019. [[paper](https://arxiv.org/pdf/1905.03677.pdf)][[code in Pytorch](https://github.com/Mephisto405/Learning-Loss-for-Active-Learning)]
 
-- Contextual Diversity for Active Learning. ECCV 2020 [[paper](https://arxiv.org/pdf/2008.05723.pdf)][[code in Pytorch](https://github.com/sharat29ag/CDAL)] CDAL
+- Contextual Diversity for Active Learning. ECCV 2020 [[paper](https://arxiv.org/pdf/2008.05723.pdf)][[code in Pytorch](https://github.com/sharat29ag/CDAL)] **CDAL**
   - Based on both uncertainty and diversity. It tries to select samples with different class confusion (distribution of prediction confidence is different) to enrich the contextual diversity
    - It implements different selection strategies: CDAL+Core-Set, CDAL+RL, Contextual Diversity, Visual representation, Semantic representation
    
-- Multi-instance Active Learning for Object Detection. arxiv. 2021. [[paper](https://arxiv.org/pdf/2104.02324.pdf)][[code](https://github.com/yuantn/MI-AOD)]
+- Multi-instance Active Learning for Object Detection. arxiv. 2021. [[paper](https://arxiv.org/pdf/2104.02324.pdf)][[code](https://github.com/yuantn/MI-AOD)] **MIAOD**
 
 
 
