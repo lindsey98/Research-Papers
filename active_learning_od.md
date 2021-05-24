@@ -41,7 +41,7 @@
 
 | Paper  | Dataset | Model |
 | ------------- | ------------- | ------------- |
-| Localization-aware  | PASCAL 2012, PASCAL 2007, MS COCO | Faster-RCNN, Single Shot multibox Detector (SSD) |
+| Localization-aware  | PASCAL 2012, PASCAL 2007, MS COCO | Faster-RCNN, SSD |
 | SSM  | PASCAL 2012, PASCAL 2007, MS COCO | Faster R-CNN, R-FCN |
 | Consistency-based | PASCAL VOC, MSCOCO | SSD, R-FCN |
 | CDAL | PASCAL VOC 2007 and 2012 | SSD |
