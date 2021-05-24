@@ -22,7 +22,7 @@
    
 - Multi-instance Active Learning for Object Detection. arxiv. 2021. [[paper](https://arxiv.org/pdf/2104.02324.pdf)][[code](https://github.com/yuantn/MI-AOD)] **MIAOD**
    - Design **instance uncertainty learning** module which introduce two adversarial classifiers and measure their agreement, training is min-max game
-   - Deign **instance uncertainty reweighting** module, since simply summing/averaging pixel uncertainty into image uncertainty is too coarse, we need to effectively eliminate those noisy instances 
+   - Design **instance uncertainty reweighting** module, since simply summing/averaging pixel uncertainty into image uncertainty is too coarse, we need to effectively eliminate those noisy instances 
 
 ## Task-agnostic baseline
    
