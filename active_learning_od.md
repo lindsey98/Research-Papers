@@ -47,4 +47,3 @@
 | CDAL | PASCAL VOC 2007 and 2012 | SSD |
 | MIAOD | PASCAL 2012, PASCAL 2007, MS COCO | RetinaNet, SSD |
 | LL4AL | PASCAL VOC 2007 and 2012 | SSD |
-| ------------- |------------- |------------- |
