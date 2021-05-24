@@ -9,10 +9,6 @@
    - Use **cross-image consistency** (crop and paste) + classification confidence to measure uncertainty
    - Leverage both high-consistency examples (trust the model's prediction as label) and low-consistency examples (pseudo-label) to complement the traditional uncertainty approach which only focus on high-uncertainty examples 
 
-- Active learning for deep detection network. ICCV 2019 [[paper](https://arxiv.org/pdf/1911.09168.pdf)][[code in Tensorflow](https://gitlab.com/haghdam/deep_active_learning/-/tree/master)]
-   - Use **consistency of pixel's objectiveness with respect to its neighborhood pixels** as uncertainty measure. The formula is very similar to **BALD**, taking the difference between entropy of average and average entropy. 
-   - Uncertainty for a image is the average of max-pooled scores
-
 - Consistency-based Semi-supervised Learning for Object Detection. arxiv, 2019. [[paper](https://openreview.net/pdf?id=BkgHgrSxIr)][[code](https://github.com/soo89/CSD-SSD)]
    - Compute the **consistency in prediction after horizontal flip**: Horizontal flipped image should get symmetric prediction 
 
@@ -34,7 +30,21 @@
 - Cost-effective Object Detection: Active Sample Mining with Switchable Selection Criteria.  IEEE transactions on neural networks and learning systems, 2018. [[paper](https://arxiv.org/pdf/1807.00147.pdf)][[code in Pytorch](https://github.com/yanxp/ASM-Pytorch)]
    - This is the paper before **SSM**
 
+- Active learning for deep detection network. ICCV 2019 [[paper](https://arxiv.org/pdf/1911.09168.pdf)][[code in Tensorflow](https://gitlab.com/haghdam/deep_active_learning/-/tree/master)]
+   - Use **consistency of pixel's objectiveness with respect to its neighborhood pixels** as uncertainty measure. The formula is very similar to **BALD**, taking the difference between entropy of average and average entropy. 
+   - Uncertainty for a image is the average of max-pooled scores
+
 - Scalable Active Learning for Object Detection. arxiv. 2020. [[paper](https://arxiv.org/pdf/2004.04699.pdf)] No code
    - Scoring function: entropy at position p of class c (on objectness map), mutual information of E ensemble models, gradient of output layer, bounding box with confidence
    - Sampling strategy: k-means++, coreset, sparse-modelling
 
+
+| Paper  | Dataset | Model |
+| ------------- | ------------- | ------------- |
+| Localization-aware  | PASCAL 2012, PASCAL 2007, MS COCO | Faster-RCNN, Single Shot multibox Detector (SSD) |
+| SSM  | PASCAL 2012, PASCAL 2007, MS COCO | Faster R-CNN, R-FCN |
+| Consistency-based | PASCAL VOC, MSCOCO | SSD, R-FCN |
+| CDAL | PASCAL VOC 2007 and 2012 | SSD |
+| MIAOD | PASCAL 2012, PASCAL 2007, MS COCO | RetinaNet, SSD |
+| LL4AL | PASCAL VOC 2007 and 2012 | SSD |
+| ------------- |------------- |------------- |
