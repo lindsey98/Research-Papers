@@ -1,6 +1,6 @@
 
 ## Important baselines
-- Localization-aware active learning for object detection. Asian Conference on Computer Vision 2018. [[paper](https://arxiv.org/pdf/1801.05124.pdf)] No code
+- Localization-aware active learning for object detection. Asian Conference on Computer Vision 2018. [[paper](https://arxiv.org/pdf/1801.05124.pdf)][Nonofficial code in Pytorch Detectron2](https://github.com/lolipopshock/Detectron2_AL)
     - Use **localization tightness** and **localization stability** as uncertainty measures
     - Localization tightness: IoU overlap between proposals and final predicted bounding boxes 
     - Localization stability: Consistency in prediction when proposals are perturbed by noises 
