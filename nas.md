@@ -27,14 +27,16 @@ Given lambda, feed into a black-box model, get f(\lambda)
 
 #### Tree of Parzen Estimators
 - Instead of modeling p(y|lambda), it tries to model p(lambda is good) vs p(lambda is bad). lambda is good when y exceeds some values, bad vice versa. So we can identify good lambda's and bad lambda's, fit KDE for two distributions, acqusation function is defined as ![equation](https://latex.codecogs.com/gif.latex?%5Cfrac%7BP%28%20%5Ctextit%7Bgood%20%7D%20%5Clambda%29%7D%7BP%28%20%5Ctextit%7Bbad%20%7D%20%5Clambda%20%29%7D). 
+<img src="pic/Screenshot 2021-06-10 at 11.41.38 AM.png">
 
+#### Hyperband
+- Allocate budgets to all configuration settings
+- Sucessivehalving: Evaluate and cut those poor performing settings, reallocate budgets to those promising ones
+- However, it is based on Random Search because it randomly pick configurations
 
-
-
-
-
-
-
-
+#### BOHB 
+Combine TPE with Hyperband
+- Sample configuration settings by fitting KDEs and get acquisation function
+- Do Sucessivehalving
 
 ## NAS
