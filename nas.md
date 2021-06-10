@@ -33,6 +33,7 @@ Given lambda, feed into a black-box model, get f(\lambda)
 - Allocate budgets to all configuration settings
 - Sucessivehalving: Evaluate and cut those poor performing settings, reallocate budgets to those promising ones
 - However, it is based on Random Search because it randomly pick configurations
+<img src="pic/Screenshot 2021-06-10 at 11.45.13 AM.png">
 
 #### BOHB 
 Combine TPE with Hyperband
