@@ -10,7 +10,12 @@ Algorithm is A, \lambda is the hyperparameter(s), a HPO problem is trying to ![e
 Given lambda, feed into a black-box model, get f(\lambda)
 
 ### Methods
-- Grid search or Random search
+- Grid search or Random search 
+<img src="pic/Screenshot 2021-06-10 at 11.26.42 AM.png">
+Inefficient, however RS perform better than GS when there are some unimportant dimensions
+
+- BO-GP
+Fit a probalistic model ![equation](https://latex.codecogs.com/gif.latex?%3Cf%28%5Clambda%29%2C%20%5Clambda%3E) where f(.) is the evaluation metric (loss/accuracy). Every iteration sample hyperparameter with the highest aquisation function to balance between exploration (lambda that are unexplored and with high uncertainty) and exploitation (current best lambda found). 
 
 
 
