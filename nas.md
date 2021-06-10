@@ -44,6 +44,8 @@ Combine TPE with Hyperband
 Neural network could be rather complex (skip connections, concatenation, different paths). Thus people have been using cell search space instead to majorly focusing on optimizing a cell which is repeated throughout the whole network.
 <img src="pic/Screenshot 2021-06-10 at 11.52.12 AM.png">
 
+<img src="pic/Screenshot 2021-06-10 at 11.54.45 AM.png">
+
 
 
 
