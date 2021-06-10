@@ -16,7 +16,9 @@ Inefficient, however RS perform better than GS when there are some unimportant d
 
 - BO-GP
 Fit a probalistic model ![equation](https://latex.codecogs.com/gif.latex?%3Cf%28%5Clambda%29%2C%20%5Clambda%3E) where f(.) is the evaluation metric (loss/accuracy). Every iteration sample hyperparameter with the highest aquisation function to balance between exploration (lambda that are unexplored and with high uncertainty) and exploitation (current best lambda found). 
+<img src="pic/Screenshot 2021-06-10 at 11.28.56 AM.png">
 
+- 
 
 
 
